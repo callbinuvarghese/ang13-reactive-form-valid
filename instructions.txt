@@ -1,0 +1,104 @@
+https://www.bezkoder.com/angular-13-form-validation/
+
+➜  angular cd formvalidation1
+➜  formvalidation1 npm init -y
+Wrote to /Users/binu.varghese/source/angular/formvalidation1/package.json:
+
+{
+  "name": "formvalidation1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+➜  formvalidation1 npm install lite-server --save-dev
+npm WARN deprecated debug@4.1.1: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+npm WARN deprecated debug@4.1.1: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+npm WARN deprecated debug@4.1.1: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is reco
+mmended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+
+added 194 packages, and audited 195 packages in 10s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+➜  formvalidation1  ng new formvalidation1
+Node.js version v17.3.0 detected.
+Odd numbered Node.js versions will not enter LTS status and should not be used for production. For more information, please see https://nodejs.org/en/about/releases/.
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+CREATE formvalidation1/README.md (1061 bytes)
+CREATE formvalidation1/.editorconfig (274 bytes)
+CREATE formvalidation1/.gitignore (620 bytes)
+CREATE formvalidation1/angular.json (3093 bytes)
+CREATE formvalidation1/package.json (1079 bytes)
+CREATE formvalidation1/tsconfig.json (863 bytes)
+CREATE formvalidation1/.browserslistrc (600 bytes)
+CREATE formvalidation1/karma.conf.js (1432 bytes)
+CREATE formvalidation1/tsconfig.app.json (287 bytes)
+CREATE formvalidation1/tsconfig.spec.json (333 bytes)
+CREATE formvalidation1/.vscode/extensions.json (130 bytes)
+CREATE formvalidation1/.vscode/launch.json (474 bytes)
+CREATE formvalidation1/.vscode/tasks.json (938 bytes)
+CREATE formvalidation1/src/favicon.ico (948 bytes)
+CREATE formvalidation1/src/index.html (301 bytes)
+CREATE formvalidation1/src/main.ts (372 bytes)
+CREATE formvalidation1/src/polyfills.ts (2338 bytes)
+CREATE formvalidation1/src/styles.css (80 bytes)
+CREATE formvalidation1/src/test.ts (745 bytes)
+CREATE formvalidation1/src/assets/.gitkeep (0 bytes)
+CREATE formvalidation1/src/environments/environment.prod.ts (51 bytes)
+CREATE formvalidation1/src/environments/environment.ts (658 bytes)
+CREATE formvalidation1/src/app/app-routing.module.ts (245 bytes)
+CREATE formvalidation1/src/app/app.module.ts (393 bytes)
+CREATE formvalidation1/src/app/app.component.css (0 bytes)
+CREATE formvalidation1/src/app/app.component.html (23364 bytes)
+CREATE formvalidation1/src/app/app.component.spec.ts (1100 bytes)
+CREATE formvalidation1/src/app/app.component.ts (219 bytes)
+✔ Packages installed successfully.
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+    Successfully initialized git.
+➜  formvalidation1 ls
+formvalidation1   node_modules      package-lock.json package.json
+➜  formvalidation1 code .
+
+EDIT formvalidation1/src/app/app.module.ts
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+ imports: [
+    BrowserModule,
+    ReactiveFormsModule
+  ],
+
+
+EDIT formvalidation1/src/index.html to include bootstrap
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+➜  formvalidation1 mkdir formvalidation1/src/app/utils/
+➜  formvalidation1 touch formvalidation1/src/app/utils/validation.ts
+
+EDIT formvalidation1/src/app/app.component.ts
+...
+...
+
+RUN app
+ ng serve
